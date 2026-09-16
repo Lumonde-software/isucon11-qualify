@@ -10,30 +10,6 @@ down:
 up-go:
 	docker-compose -f docker-compose-dev.yml up --build -- backend-go mysql-backend jiaapi-mock
 
-.PHONY: up-rust
-up-rust:
-	docker-compose -f docker-compose-dev.yml up --build -- backend-rust mysql-backend jiaapi-mock
-
-.PHONY: up-python
-up-python:
-	docker-compose -f docker-compose-dev.yml up --build -- backend-python mysql-backend jiaapi-mock
-
-.PHONY: up-nodejs
-up-nodejs:
-	docker-compose -f docker-compose-dev.yml up --build -- backend-nodejs mysql-backend jiaapi-mock
-
-.PHONY: up-perl
-up-perl:
-	docker-compose -f docker-compose-dev.yml up --build -- backend-perl mysql-backend jiaapi-mock
-
-.PHONY: up-php
-up-php:
-	docker-compose -f docker-compose-dev.yml up -d --build -- backend-php mysql-backend jiaapi-mock
-
-.PHONY: up-ruby
-up-ruby:
-	docker-compose -f docker-compose-dev.yml up --build -- backend-ruby mysql-backend jiaapi-mock
-
 .PHONY: down-dev
 down-dev:
 	docker-compose -f docker-compose-dev.yml down
@@ -41,30 +17,6 @@ down-dev:
 .PHONY: test-go
 test-go:
 	target=go make test
-
-.PHONY: test-php
-test-php:
-	target=php make test
-
-.PHONY: test-rust
-test-rust:
-	target=rust make test
-
-.PHONY: test-python
-test-python:
-	target=python make test
-
-.PHONY: test-nodejs
-test-nodejs:
-	target=nodejs make test
-
-.PHONY: test-perl
-test-perl:
-	target=perl make test
-
-.PHONY: test-ruby
-test-ruby:
-	target=ruby make test
 
 .PHONY: test
 test:
