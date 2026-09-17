@@ -4,9 +4,7 @@
     name:
     - mariadb-common
     - mariadb-server
-    - mariadb-server-core
     - mariadb-client
-    - mariadb-client-core
     update_cache: yes
 
 - name: "roles/contestant/tasks/mariadb: Set temporary password"
