@@ -3,10 +3,10 @@
   apt:
     name:
     - mariadb-common
-    - mariadb-server-10.3
-    - mariadb-server-core-10.3
-    - mariadb-client-10.3
-    - mariadb-client-core-10.3
+    - mariadb-server
+    - mariadb-server-core
+    - mariadb-client
+    - mariadb-client-core
     update_cache: yes
 
 - name: "roles/contestant/tasks/mariadb: Set temporary password"
